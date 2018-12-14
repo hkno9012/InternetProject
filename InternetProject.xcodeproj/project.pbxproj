@@ -35,6 +35,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		860CF37021C436D200AF3489 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				8626426B21C1AC5B0080F205 /* AppDelegate.swift */,
+				8626427221C1AC5D0080F205 /* Assets.xcassets */,
+				8626427721C1AC5D0080F205 /* Info.plist */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		860CF37121C436DE00AF3489 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8626426D21C1AC5B0080F205 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		860CF37221C4370F00AF3489 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8626426F21C1AC5B0080F205 /* Main.storyboard */,
+				8626427421C1AC5D0080F205 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8626425F21C1AC5B0080F205 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +81,9 @@
 		8626426A21C1AC5B0080F205 /* InternetProject */ = {
 			isa = PBXGroup;
 			children = (
-				8626426B21C1AC5B0080F205 /* AppDelegate.swift */,
-				8626426D21C1AC5B0080F205 /* ViewController.swift */,
-				8626426F21C1AC5B0080F205 /* Main.storyboard */,
-				8626427221C1AC5D0080F205 /* Assets.xcassets */,
-				8626427421C1AC5D0080F205 /* LaunchScreen.storyboard */,
-				8626427721C1AC5D0080F205 /* Info.plist */,
+				860CF37021C436D200AF3489 /* Resouces */,
+				860CF37121C436DE00AF3489 /* Controller */,
+				860CF37221C4370F00AF3489 /* View */,
 			);
 			path = InternetProject;
 			sourceTree = "<group>";
