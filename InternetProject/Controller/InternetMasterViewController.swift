@@ -50,28 +50,41 @@ public class InternetMasterViewController: UITableViewController
         if let split = splitViewController
         {
             let controllers = split.viewControllers
-            internetDetail = (Controllers[controllers.count-1] as! UINavigationController).topViewController as? InternetDetailViewController
+            internetDetail = (controllers[controllers.count-1] as! UINavigationController).topViewController as? InternetDetailViewController
         }
-        //----------------------------------------------------------------
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     //================================================================
-    // MARK: - Table view data source
-
-    public override func numberOfSections(in tableView: UITableView) -> Int
+    public override func viewWillAppear(_ animated: Bool) -> Void
     {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
+        //----------------------------------------------------------------
+        super.viewWillAppear(animated)
     }
     //================================================================
+    // MARK: - Table View
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return addresses.count
+    }
+    //================================================================
+    public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        //----------------------------------------------------------------
+        let rowText = internetTopics[indexPath.row]
+        cell.textLabel!.text = rowText
+        return cell
+    }
+    //================================================================
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        internetDetail?.detailAddress = addresses[indexPath.row]
+        internetDetail?.detailTitle = internetTopics[indexPath.row]
+        //----------------------------------------------------------------
+        if (internetDetail != nil)
+        {
+            splitViewController?.showDetailViewController(internetDetail!, sender: nil)
+        }
     }
     //================================================================
     /*
