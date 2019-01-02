@@ -9,14 +9,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Internet Detail View Controller-->
         <scene sceneID="Fai-ZE-rKd">
             <objects>
-                <viewController id="K4D-Jb-gLq" sceneMemberID="viewController">
+                <viewController id="K4D-Jb-gLq" customClass="InternetDetailViewController" customModule="InternetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S1O-Kx-80A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-an-Gpn">
+                                <rect key="frame" x="166" y="108" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Le1-zi-OVC">
+                                <rect key="frame" x="70" y="437" width="235" height="130"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="baN-TY-hD1"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wg3-an-Gpn" firstAttribute="leading" secondItem="eb7-Ie-iRj" secondAttribute="leading" constant="166" id="BOm-JZ-TnU"/>
+                            <constraint firstItem="eb7-Ie-iRj" firstAttribute="bottom" secondItem="Le1-zi-OVC" secondAttribute="bottom" constant="100" id="MGr-6K-XTh"/>
+                            <constraint firstItem="Wg3-an-Gpn" firstAttribute="top" secondItem="eb7-Ie-iRj" secondAttribute="top" constant="44" id="V9V-O4-7nA"/>
+                            <constraint firstItem="Wg3-an-Gpn" firstAttribute="centerX" secondItem="Le1-zi-OVC" secondAttribute="centerX" id="VLC-Rq-P2B"/>
+                            <constraint firstItem="Le1-zi-OVC" firstAttribute="leading" secondItem="eb7-Ie-iRj" secondAttribute="leading" constant="70" id="Vgq-6M-SKL"/>
+                            <constraint firstItem="Le1-zi-OVC" firstAttribute="width" secondItem="eb7-Ie-iRj" secondAttribute="width" id="ZbU-JS-Mnl"/>
+                            <constraint firstItem="Wg3-an-Gpn" firstAttribute="centerX" secondItem="S1O-Kx-80A" secondAttribute="centerX" id="da9-kh-DMj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eb7-Ie-iRj"/>
                     </view>
                     <navigationItem key="navigationItem" id="D6a-19-GsV"/>
@@ -28,7 +56,7 @@
         <!--Root View Controller-->
         <scene sceneID="XYu-Fn-CG7">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="rOW-l4-Ksi" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="rOW-l4-Ksi" customClass="InternetMasterViewController" customModule="InternetProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6d4-vv-mvp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
