@@ -17,17 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-an-Gpn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wg3-an-Gpn">
                                 <rect key="frame" x="166" y="108" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Le1-zi-OVC">
-                                <rect key="frame" x="70" y="437" width="235" height="130"/>
+                                <rect key="frame" x="0.0" y="391" width="375" height="200"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="baN-TY-hD1"/>
+                                    <constraint firstAttribute="height" constant="200" id="LvA-uh-iDK"/>
                                 </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -37,13 +37,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wg3-an-Gpn" firstAttribute="leading" secondItem="eb7-Ie-iRj" secondAttribute="leading" constant="166" id="BOm-JZ-TnU"/>
-                            <constraint firstItem="eb7-Ie-iRj" firstAttribute="bottom" secondItem="Le1-zi-OVC" secondAttribute="bottom" constant="100" id="MGr-6K-XTh"/>
-                            <constraint firstItem="Wg3-an-Gpn" firstAttribute="top" secondItem="eb7-Ie-iRj" secondAttribute="top" constant="44" id="V9V-O4-7nA"/>
-                            <constraint firstItem="Wg3-an-Gpn" firstAttribute="centerX" secondItem="Le1-zi-OVC" secondAttribute="centerX" id="VLC-Rq-P2B"/>
-                            <constraint firstItem="Le1-zi-OVC" firstAttribute="leading" secondItem="eb7-Ie-iRj" secondAttribute="leading" constant="70" id="Vgq-6M-SKL"/>
-                            <constraint firstItem="Le1-zi-OVC" firstAttribute="width" secondItem="eb7-Ie-iRj" secondAttribute="width" id="ZbU-JS-Mnl"/>
-                            <constraint firstItem="Wg3-an-Gpn" firstAttribute="centerX" secondItem="S1O-Kx-80A" secondAttribute="centerX" id="da9-kh-DMj"/>
+                            <constraint firstItem="Le1-zi-OVC" firstAttribute="leading" secondItem="S1O-Kx-80A" secondAttribute="leading" id="28X-Y3-pbu"/>
+                            <constraint firstItem="eb7-Ie-iRj" firstAttribute="bottom" secondItem="Le1-zi-OVC" secondAttribute="bottom" constant="76" id="9GK-xc-xG1"/>
+                            <constraint firstItem="Le1-zi-OVC" firstAttribute="centerX" secondItem="Wg3-an-Gpn" secondAttribute="centerX" id="Q5c-6u-kU0"/>
+                            <constraint firstAttribute="trailing" secondItem="Le1-zi-OVC" secondAttribute="trailing" id="jT3-u6-Af1"/>
+                            <constraint firstItem="Le1-zi-OVC" firstAttribute="width" secondItem="eb7-Ie-iRj" secondAttribute="width" id="mk7-FM-PpS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eb7-Ie-iRj"/>
                     </view>

@@ -40,9 +40,9 @@
 		860CF37021C436D200AF3489 /* Resouces */ = {
 			isa = PBXGroup;
 			children = (
+				8626427721C1AC5D0080F205 /* Info.plist */,
 				8626426B21C1AC5B0080F205 /* AppDelegate.swift */,
 				8626427221C1AC5D0080F205 /* Assets.xcassets */,
-				8626427721C1AC5D0080F205 /* Info.plist */,
 			);
 			path = Resouces;
 			sourceTree = "<group>";
